@@ -549,25 +549,31 @@
 #     print(mylist[0][0:3].rstrip())
 #     for x in range(1,6):
 #         print(mylist[x].strip())
-import random
+# import random
 
-highest = 10
-answer = random.randint(1, highest)
-print(answer)   #TODO: Remove after testing
-print("Please guess the number between 1 and {}: ".format(highest))
-guess = int(input())
+# highest = 10
+# answer = random.randint(1, highest)
+# print(answer)   #TODO: Remove after testing
+# print("Please guess the number between 1 and {}: ".format(highest))
+# guess = int(input())
 
-while answer:
-    if guess == 0:
-        print("Game Over")
-        break
-    if guess == answer:
-        print("Hurray you got it")
-        break
-    else:
-        if guess < answer:
-            print("Please guess higher: ")
-            guess = int(input())
-        if guess > answer:
-            print("Please guess lower: ")
-            guess = int(input())
+# while answer:
+#     if guess == 0:
+#         print("Game Over")
+#         break
+#     if guess == answer:
+#         print("Hurray you got it")
+#         break
+#     else:
+#         if guess < answer:
+#             print("Please guess higher: ")
+#             guess = int(input())
+#         if guess > answer:
+#             print("Please guess lower: ")
+#             guess = int(input())
+Lines = ["bldr_Game_wall_5m|13751.722656 46.671505 2962.292480|-155.094345 0.000000 -2.000000"]
+for line in Lines:
+    test = line.split('|', 3)
+    objline = "SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n"
+    print("SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n")
+    
