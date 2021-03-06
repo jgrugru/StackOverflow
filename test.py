@@ -571,9 +571,51 @@
 #         if guess > answer:
 #             print("Please guess lower: ")
 #             guess = int(input())
-Lines = ["bldr_Game_wall_5m|13751.722656 46.671505 2962.292480|-155.094345 0.000000 -2.000000"]
-for line in Lines:
-    test = line.split('|', 3)
-    objline = "SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n"
-    print("SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n")
+# Lines = ["bldr_Game_wall_5m|13751.722656 46.671505 2962.292480|-155.094345 0.000000 -2.000000"]
+# for line in Lines:
+#     test = line.split('|', 3)
+#     objline = "SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n"
+#     print("SpawnObject( ", "\"",test[0],"\"", ", " , "\"",test[1],"\"", ", " , "\"",test[2],"\"" , ");\n")
     
+
+# I would try:
+# if request.method = "POST":
+#     if not Product.objects.filter(GTIN=request.GTIN).exists():
+#           new_product = Product(request.GTIN.....)
+#           new_product.save()
+#     else:
+#         update_product = Product.objects.filter(GTIN=request.GTIN)
+#         update_product.GTIN = request.GTIN
+#         update_product.save()
+#             .....
+
+
+# num = int(input("Enter a number: "))
+# num = 7
+# my_list = list(range(1,num+1))
+# print(my_list)
+# for x in my_list:
+#     if x % 5 == 0:
+#       print(*my_list[x-5: x], end='\n')
+# for x in range(num):
+#     print (x+1, end=" ")
+
+from math import fmod
+
+
+def num ():
+    # num = int (input("Enter a number: ") )
+    num = 199
+    my_list = range(1, num)
+    for x in range(0, num+1, 5):
+        print(" ".join(map(str, my_list[x:x+5])))
+
+    # lambda_func = lambda x: (str(x) + '\n') if (x % 5 == 0)
+    # map(lambda_func, my_range)
+
+    # for x in range(num+1):
+    #     if x % 5 == 0:
+    #         print()
+    #     elif x >= 5:
+    #         print(*range(x-5, x+1))
+num()
