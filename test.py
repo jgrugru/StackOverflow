@@ -600,15 +600,15 @@
 # for x in range(num):
 #     print (x+1, end=" ")
 
-from math import fmod
+# from math import fmod
 
 
-def num ():
-    # num = int (input("Enter a number: ") )
-    num = 199
-    my_list = range(1, num)
-    for x in range(0, num+1, 5):
-        print(" ".join(map(str, my_list[x:x+5])))
+# def num ():
+#     # num = int (input("Enter a number: ") )
+#     num = 199
+#     my_list = range(1, num)
+#     for x in range(0, num+1, 5):
+#         print(" ".join(map(str, my_list[x:x+5])))
 
     # lambda_func = lambda x: (str(x) + '\n') if (x % 5 == 0)
     # map(lambda_func, my_range)
@@ -618,4 +618,13 @@ def num ():
     #         print()
     #     elif x >= 5:
     #         print(*range(x-5, x+1))
-num()
+# num()
+
+
+theSet={'products.add_product','products.add_category','books.view_books','cats.change_cats'} 
+
+#desired output
+newSet = {'add_product','add_category','view_books', 'change_cats'}
+
+new_list = list(map(lambda x: x.split('.')[1], theSet))
+print(new_list)
