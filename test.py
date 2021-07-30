@@ -621,10 +621,139 @@
 # num()
 
 
-theSet={'products.add_product','products.add_category','books.view_books','cats.change_cats'} 
+# theSet={'products.add_product','products.add_category','books.view_books','cats.change_cats'} 
 
-#desired output
-newSet = {'add_product','add_category','view_books', 'change_cats'}
+# #desired output
+# newSet = {'add_product','add_category','view_books', 'change_cats'}
 
-new_list = list(map(lambda x: x.split('.')[1], theSet))
-print(new_list)
+# new_list = list(map(lambda x: x.split('.')[1], theSet))
+# print(new_list)
+
+# truck_id_list = [13,16,13,89,89,13,16,13]
+# item_id_list = [85394, 294, 294, 3115, 85394, 294, 85394, 3115]
+
+# for x, truck_id in enumerate(truck_id_list):
+#     print(str(truck_id) + ": " + str(item_id_list[x]))
+
+# from fileflamingo.EncryptionFile import EncryptionFile
+
+# my_file = EncryptionFile("./encrypted.txt", './my_key.pem')
+
+# my_file.create_filepath()
+# my_file.append_data_to_file("I am about to be encrypted.")
+# my_file.encrypt()
+# import time
+
+# def sort(fn):
+#     def wrapper_sort(*args):
+#         newArgs = []
+#         newArgs = [sorted(x) for x in args]
+#         print(f"I'm inside {fn.__name__}")
+#         print(f"These are the newArgs {newArgs}")
+#         return fn(*newArgs)
+
+#     return wrapper_sort
+
+# def remove_ws(fn):
+#     def wrapper_remove_ws(*args):
+#         newArgs = []
+#         for my_list in args:
+#             new_list = [x for x in my_list if not x.isspace()]
+#             newArgs.append(new_list)
+#         print(f"I'm inside {fn.__name__}")
+#         print(f"These are the newArgs {newArgs}")
+#         return fn(*newArgs)
+
+#     return wrapper_remove_ws
+
+# @sort
+# @remove_ws
+# def isAnagram(list1: list, list2: list) -> bool:
+#     print(f"The clean list 1 = {list1}\nThe clean list 2 = {list}")
+#     return list1 == list2
+
+# string1 = 'hhha  bc d  e f d g asd g asd hh g e d'
+# string2 = 'abby dcadd sdee g'
+
+# total_time = 0
+
+# for x in range(1):
+#     start = time.time()
+
+#     print(f"The isAnagram results: {isAnagram(string1, string2)}")
+
+#     end = time.time()
+#     diff = end - start
+#     total_time += diff
+
+# print("average time: ", total_time/100000)
+
+# def wrapper(f):
+#     def fun(l):
+#         f('+91 {} {}'.format(n[-10:-5], n[-5:]) for n in l)
+#     return fun
+
+# @wrapper
+# def sort_phone(l):
+#     print(*sorted(l), sep='\n')
+
+# if __name__ == '__main__':
+#     l = [input() for _ in range(int(input()))]
+#     sort_phone(l)
+
+
+# from collections import defaultdict, Counter
+# student_grades = defaultdict(list)
+# grades = [
+#     ('elliot', 91),
+#     ('neelam', 98),
+#     ('bianca', 81),
+#     ('elliot', 88),
+# ]
+
+# for name, grade in grades:
+#     student_grades[name].append(grade)
+
+# print(f"Here is the student grades dictionary: {student_grades}")
+
+
+# fruits = {
+#     'apples': 5,
+# }
+# print(fruits.keys())
+# print([x for x in fruits.keys()])
+
+
+# def unique_names(names1, names2):
+#     unique_names_list = []
+#     [unique_names_list.append(name) for name in (names1 + names2) if name not in unique_names_list]
+#     return sorted(unique_names_list)
+
+# if __name__ == "__main__":
+#     names1 = ["Ava", "Emma", "Olivia"]
+#     names2 = ["Olivia", "Sophia", "Emma"]
+#     print(unique_names(names1, names2)) # should print Ava, Emma, Olivia, Sophia
+
+
+# my_dict = {'a': (1,20), 'b': (4,50)}
+# def add_item(item_dict, name, quantity=0, order=0): 
+#     if name in item_dict:
+#         my_tuple = item_dict[name]
+#         item_dict[name] = (my_tuple[0] + quantity, my_tuple[1] + order)
+#     else:
+#         raise ValueError('item not in catalogue')
+
+#     return item_dict
+
+
+# print(add_item(my_dict, 'a', quantity=1))
+
+# from functools import reduce
+
+# function_lists = [lambda x: x+1, lambda x: x+2, lambda x: x+3]
+# # print(reduce(lambda x, y: lambda n: x(y(n)), *function_lists)(5))
+# my_list = [fn(10) for fn in function_lists]
+# print(my_list)
+
+Choose_Character = input('Choose a character:\n1.Warrior\n2.Wizard\n3.Elf\n')
+print(type(Choose_Character))
